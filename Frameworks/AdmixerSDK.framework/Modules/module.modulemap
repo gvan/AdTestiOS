@@ -1,0 +1,11 @@
+framework module AdmixerSDK {
+  umbrella header "AdmixerSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module AdmixerSDK.Swift {
+    header "AdmixerSDK-Swift.h"
+    requires objc
+}

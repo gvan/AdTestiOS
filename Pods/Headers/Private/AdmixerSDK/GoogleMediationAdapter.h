@@ -1,0 +1,1 @@
+../../../AdmixerSDK/mediation/mediation_adapter/GoogleMediationAdapter/GoogleMediationAdapter/GoogleMediationAdapter.h

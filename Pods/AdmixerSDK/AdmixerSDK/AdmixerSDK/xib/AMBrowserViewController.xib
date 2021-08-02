@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AMBrowserViewController" customModule="AdmixerSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="CWt-8m-AGm" id="CwM-Mc-r4g"/>
+                <outlet property="containerViewSuperviewTopConstraint" destination="5zO-5d-CEU" id="FPE-GB-WL9"/>
+                <outlet property="forwardButton" destination="Im6-zk-AJg" id="a9W-a4-dKt"/>
+                <outlet property="okButton" destination="ZQF-W7-gnb" id="Wg2-EY-lte"/>
+                <outlet property="openInButton" destination="i29-5x-Rnd" id="7LB-Uz-ynn"/>
+                <outlet property="refreshButton" destination="X3x-Ue-YrL" id="cZf-C1-do7"/>
+                <outlet property="toolbar" destination="jHg-CQ-fQU" id="04X-WC-BXV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="f6i-ge-KQp"/>
+                <outlet property="webViewContainerView" destination="CjR-eL-hN3" id="T3p-Po-7Va"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-CQ-fQU">
+                    <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                    <items>
+                        <barButtonItem image="am_arrow_left.png" id="CWt-8m-AGm">
+                            <connections>
+                                <action selector="backAction:" destination="-1" id="5mI-DI-Vn8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="pc4-M9-Oyf"/>
+                        <barButtonItem image="am_arrow_right.png" id="Im6-zk-AJg">
+                            <connections>
+                                <action selector="forwardAction:" destination="-1" id="1Tu-dL-adv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="DLF-iY-nqL"/>
+                        <barButtonItem systemItem="action" id="i29-5x-Rnd">
+                            <connections>
+                                <action selector="openInAction:" destination="-1" id="FSw-se-fiP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Ksn-Us-djZ"/>
+                        <barButtonItem systemItem="refresh" id="X3x-Ue-YrL">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="Fg7-Cc-uHd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="1bF-uA-hON"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="YOh-ju-mMj"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tRT-aL-CzO"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9EJ-bl-i1O"/>
+                        <barButtonItem title="OK" id="ZQF-W7-gnb">
+                            <connections>
+                                <action selector="closeAction:" destination="-1" id="d2Y-GS-cVN"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjR-eL-hN3">
+                    <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jHg-CQ-fQU" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="25W-lN-X2Q"/>
+                <constraint firstItem="CjR-eL-hN3" firstAttribute="bottom" secondItem="jHg-CQ-fQU" secondAttribute="top" id="3zK-bJ-tRZ"/>
+                <constraint firstItem="CjR-eL-hN3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5zO-5d-CEU"/>
+                <constraint firstItem="CjR-eL-hN3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7eb-T0-DUA"/>
+                <constraint firstItem="CjR-eL-hN3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="C74-Op-lAZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jHg-CQ-fQU" secondAttribute="bottom" id="R9o-Nn-GbL"/>
+                <constraint firstItem="jHg-CQ-fQU" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="zkQ-Ct-0V1"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="120"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="am_arrow_left.png" width="22" height="22"/>
+        <image name="am_arrow_right.png" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

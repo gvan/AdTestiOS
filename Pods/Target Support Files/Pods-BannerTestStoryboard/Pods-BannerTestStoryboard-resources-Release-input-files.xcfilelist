@@ -1,0 +1,27 @@
+${PODS_ROOT}/Target Support Files/Pods-BannerTestStoryboard/Pods-BannerTestStoryboard-resources.sh
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/admixer_vast_video.html
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/anjam.js
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/am_arrow_left.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/am_arrow_left@2x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/am_arrow_left@3x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/am_arrow_right.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/am_arrow_right@2x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/am_arrow_right@3x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/compass.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/compass@2x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/compass@3x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/interstitial_closebox.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/interstitial_closebox@2x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/interstitial_flat_closebox.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/interstitial_flat_closebox@2x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/interstitial_flat_closebox@3x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/UIButtonBarArrowLeft.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/UIButtonBarArrowLeft@2x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/UIButtonBarArrowRight.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/images/UIButtonBarArrowRight@2x.png
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/mraid.js
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/player.js
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/Resources/sdkjs.js
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/xib/AMBrowserViewController.xib
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/xib/AMInterstitialAdViewController.xib
+${PODS_ROOT}/AdmixerSDK/AdmixerSDK/AdmixerSDK/xib/AMRewardedAdViewController.xib

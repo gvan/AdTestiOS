@@ -1,0 +1,6 @@
+module Pods_BannerTestStoryboard {
+  umbrella header "Pods-BannerTestStoryboard-umbrella.h"
+
+  export *
+  module * { export * }
+}

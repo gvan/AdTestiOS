@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+</head>
+
+<body style="margin: 0;padding: 0;">
+<script src="mraid.js"></script>
+<script src="player.js"></script>
+<div id="player-container" style="width: 100%; height: 100%; position: absolute;"></div>
+<script>
+    var playerContainerEl = document.getElementById("player-container");
+    var IOS = "iOS";
+    var ANDROID = "Android";
+    var WINDOWS_PHONE = "Windows Phone";
+    var AD_NAME = "roll";
+    var ua = getMobileOperatingSystem();
+    var adPlayer;
+    var paused = true;
+
+    function initPlayer() {
+        if (adPlayer)
+            adPlayer.close();
+        adPlayer = new AdPlayer();
+        adPlayer.appendTo(playerContainerEl);
+        initEvent();
+    }
+    initPlayer();
+
+    function initEvent() {
+        adPlayer.on("ready", function (ad) {
+            console.log("READY");
+            sendEvent("adReady");
+            adPlayer.showAd();
+        });
+        adPlayer.on("start", function () {
+            console.log("start");
+            sendEvent("videoStart");
+        });
+        adPlayer.on("complete", function () {
+            console.log("complete");
+            sendEvent("video-complete");
+        });
+        adPlayer.on("skip", function() {
+            console.log("skip");
+            sendEvent("video-skip");
+        });
+        adPlayer.on("firstquartile", function () {
+            console.log("firstquartile");
+            sendEvent("video-first-quartile");
+        });
+        adPlayer.on("midpoint", function () {
+            console.log("midpoint");
+            sendEvent("video-mid");
+        });
+        adPlayer.on("thirdquartile", function () {
+            console.log("thirdquartile");
+            sendEvent("video-third-quartile");
+        });
+        adPlayer.on("mute", function () {
+            console.log("mute");
+            sendEvent("audio-mute");
+        });
+        adPlayer.on("unmute", function () {
+            console.log("unmute");
+            sendEvent("audio-unmute");
+        });
+        adPlayer.on("error", function () {
+            console.log("error");
+            sendEvent("video-error");
+        });
+    }
+
+    function viewabilityUpdate(isViewable) {
+        if (isViewable == "true") {
+            adPlay();
+        } else {
+            adPause();
+        }
+    }
+
+    function adPlay() {
+        if (paused) {
+            paused = false;
+            adPlayer.play();
+        }
+    }
+
+    function adPause() {
+        if (!paused) {
+            paused = true;
+            adPlayer.pause();
+        }
+    }
+
+    function hideSkip(){
+        adPlayer.hideSkip();
+    }
+
+    function showSkip(){
+        adPlayer.showSkip();
+    }
+
+    function hideLearnMore(){
+        adPlayer.hideLearnMore();
+    }
+
+    function showLearnMore(){
+        adPlayer.showLearnMore();
+    }
+
+    function hideMute(){
+        adPlayer.hideMute();
+    }
+
+    function showMute(){
+        adPlayer.showMute();
+    }
+
+    var _vast;
+    var _options;
+
+    function createVastPlayerWithContent(vast, options) {
+        if (vast)
+            _vast = vast;
+        if (options)
+            _options = options;
+        /*console.log("[createVastPlayerWithContent][vast]", vast);*/
+        console.log("[createVastPlayerWithContent][options]", _options);
+        adPlayer.setConfig(JSON.parse(_options));
+        adPlayer.setAdUnits([{
+            name: AD_NAME,
+            data: _vast
+        }]);
+        adPlayer.loadAd(AD_NAME);
+    }
+
+    function sendMessage(message) {
+        if (!message.params) {
+            message.params = {};
+        }
+        if (ua == IOS) {
+            window.webkit.messageHandlers.observe.postMessage(message);
+        } else {
+            var jsonString = JSON.stringify(message);
+            window.location = "video://" + jsonString;
+        }
+    }
+
+    function sendEvent(event, params) {
+        sendMessage({event: event, params: params});
+    }
+
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Windows Phone must come first because its UA also contains "Android"
+        if (/windows phone/i.test(userAgent)) {
+            return WINDOWS_PHONE;
+        }
+
+        if (/android/i.test(userAgent)) {
+            return ANDROID;
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return IOS;
+        }
+
+        return "unknown";
+    }
+</script>
+</body>
+</html>

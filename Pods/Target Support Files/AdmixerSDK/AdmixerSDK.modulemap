@@ -1,0 +1,6 @@
+module AdmixerSDK {
+  umbrella header "AdmixerSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
